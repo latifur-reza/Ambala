@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="052481fa-59c6-4b81-9ecf-28094e8f8b0b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="22"/>
+	<property name="ireport.y" value="0"/>
+	<field name="roomNo" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="10" width="156" height="31" uuid="50019c46-3e4c-482c-9a75-b4e92c976176"/>
+				<textElement>
+					<font fontName="SansSerif" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ambala Inn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="41" width="272" height="20" uuid="75f94cf4-2276-4210-87a2-6eb2313fdf39"/>
+				<text><![CDATA[ROAD #2, HOUSE #39, DHANMONDI R/A, DHAKA-1205, BANGLADESH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="61" width="506" height="20" uuid="64ebf7e1-8612-4224-bb21-278120ffbdee"/>
+				<text><![CDATA[TELEPHONE : 8618901, 8619373, 8610502, 8615714 FAX #880-2-8614490 EMAIL : ambala@bangla.net]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="226" y="0" width="145" height="20" uuid="18d949cf-258f-4ed0-9e87-9ddeb3f38d52"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Vacaent Room List]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="248" y="0" width="135" height="20" uuid="db2b5619-deec-4335-888b-936ded85ff30"/>
+				<text><![CDATA[Room Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="263" y="0" width="61" height="20" uuid="d0d36e83-ee37-43e9-827b-6e7af611363c"/>
+				<textFieldExpression><![CDATA[$F{roomNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="68" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="439" y="37" width="100" height="20" uuid="fc5603f7-e63f-483f-be49-14c5b16fff57"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="37" width="284" height="20" uuid="459c466c-4b50-40f9-a526-ddc80068c527"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Copyright 2018 Ambala Inn | Developed by Mistri Solutions]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="208" y="0" width="80" height="20" uuid="a3b1bff9-0a23-4b7f-944f-ff97daaf5c14"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="288" y="0" width="40" height="20" uuid="12494386-69e3-43d7-82ad-57b3906b48a4"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="03690ab8-e436-4087-9da6-6bf203852177">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="mrNo" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="arrival" class="java.lang.String"/>
+	<field name="pays" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="61" width="506" height="20" uuid="17aef362-c31f-4810-9227-3ea3a13a5664"/>
+				<text><![CDATA[TELEPHONE : 8618901, 8619373, 8610502, 8615714 FAX #880-2-8614490 EMAIL : ambala@bangla.net]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="41" width="272" height="20" uuid="a26cf39c-86e4-46d8-a198-a86ca52b516c"/>
+				<text><![CDATA[ROAD #2, HOUSE #39, DHANMONDI R/A, DHAKA-1205, BANGLADESH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="10" width="156" height="31" uuid="7cc06bea-5468-47ed-a31e-321dd1b5acbd"/>
+				<textElement>
+					<font fontName="SansSerif" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ambala Inn]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="259" y="1" width="65" height="20" uuid="19e5bfe0-306a-4865-b42e-9eb13f7764d1"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Bill]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="5" width="77" height="20" uuid="7d48fc29-8d2d-48aa-96f9-9be413a5314e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MR No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="5" width="100" height="20" uuid="259dcc85-3e36-4152-b01f-192563c5c24e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name / Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="5" width="83" height="20" uuid="18237234-982e-4d27-8666-9cc70ddfef16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arrival]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="5" width="68" height="20" uuid="fac88cc7-75b4-42f7-adbe-bdf9d72fb645"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="9" y="4" width="77" height="20" uuid="76e2883c-84d4-45a4-aba3-3048e16c6424"/>
+				<textFieldExpression><![CDATA[$F{mrNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="93" y="1" width="270" height="20" uuid="0ba1ad0c-4ca1-429e-8df3-4b110fcbd3d1"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="93" y="24" width="311" height="20" uuid="5e9460e2-c6e4-4940-a19e-7c9ac5b271a4"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="384" y="4" width="83" height="20" uuid="35584192-7684-4a3d-8530-df36bc991fd4"/>
+				<textFieldExpression><![CDATA[$F{arrival}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="477" y="4" width="68" height="20" uuid="a85e1d0a-3dd4-4abf-aeef-bce680b62cea"/>
+				<textFieldExpression><![CDATA[$F{pays}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="421" y="6" width="120" height="20" uuid="8b085d69-3786-451f-816f-34847a5f9fff"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="36" width="284" height="20" uuid="4c390cdd-1d7e-482e-b446-0cce32e59df0"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Copyright 2018 Ambala Inn | Developed by Mistri Solutions]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="433" y="36" width="100" height="20" uuid="1af165f9-cb71-4439-8393-24b50a6a91b1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="9" width="80" height="20" uuid="1111d84c-9cb5-46f5-8652-b0615f6f734d"/>
+				<textElement textAlignment="Right">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="298" y="9" width="40" height="20" uuid="606d0992-8707-465b-be53-751825e36d76"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
